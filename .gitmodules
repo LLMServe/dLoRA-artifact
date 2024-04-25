@@ -1,0 +1,3 @@
+[submodule "PEFT-Dist"]
+	path = PEFT-Dist
+	url = git@github.com:LLMServe/PEFT-Dist.git
