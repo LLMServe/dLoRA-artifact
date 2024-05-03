@@ -85,7 +85,7 @@ bash ./start_server.sh $machines 1 8 32 $master_ip 7 1 3
 
 Wait for server ready, then run:
 ```bash
-bash ./fig2b.sh
+bash ./fig2b.sh $master_ip
 ```
 
 Run `figure2.ipynb` to generate the figure `figure2.pdf`.
