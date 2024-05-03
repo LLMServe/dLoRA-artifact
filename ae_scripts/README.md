@@ -65,6 +65,15 @@ For others, num_svr=1.
 
 The information of allocated machines are needed in the following sections.
 
+After allocating, you can get the name and ip of machines by
+```bash
+squeue -u wubingyang
+```
+For example, if you get one machine with name HOST-10-140-60-7 and ip 10.140.60.7, then $machines and $master_ip in the following sections are set to them, respectively.
+If you want to allocate and run dLoRA on multiple machines, $machines in the following sections should be like HOST-10-140-60-[7,10,13,96] and $master_ip is one of them(e.g., 10.140.60.10).
+
+Also notice that once the terminal which runs command *salloc* is closed or terminated, the allocated machines would be released, so you should run *alloc.sh* and *start_server.sh* in the same terminal.
+
 ## Motivation
 
 ### Figure 2 (b) (Section 2)
