@@ -17,7 +17,7 @@ conda activate dlora
 conda install nvidia/label/cuda-12.2.0::cuda-toolkit
 conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=12.1 -c pytorch -c nvidia
 
-git clone git@github.com:LLMServe/dLoRA-artifact.git
+git clone https://github.com/LLMServe/dLoRA-artifact.git
 
 cd dLoRA-artifact
 pip install -e .
@@ -83,7 +83,7 @@ First start the server by
 bash ./start_server.sh $machines 1 8 32 $master_ip 7 1 3
 ```
 
-Wait for server ready, then run:
+Wait for server ready(i.e., wait until seeing output "INFO: Uvicorn running on http://$master_ip:8000 (Press CTRL+C to quit)"), then run:
 ```bash
 bash ./fig2b.sh $master_ip
 ```
