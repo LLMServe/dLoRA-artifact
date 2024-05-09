@@ -78,7 +78,7 @@ To deallocate machines, you need to run:
 ```bash
 scancel $JOB_ID
 ```
-where $JOB_ID can be got from command *squeue*.
+where $JOB_ID can be got from command `squeue -u wubingyang`.
 
 ## Motivation
 
