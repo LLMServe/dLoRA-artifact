@@ -74,6 +74,12 @@ If you want to allocate and run dLoRA on multiple machines, $machines in the fol
 
 Also notice that once the terminal which runs command *salloc* is closed or terminated, the allocated machines would be released, so you should run *alloc.sh* and *start_server.sh* in the same terminal.
 
+To deallocate machines, you need to run:
+```bash
+scancel $JOB_ID
+```
+where $JOB_ID can be got from command *squeue*.
+
 ## Motivation
 
 ### Figure 2 (b) (Section 2)
