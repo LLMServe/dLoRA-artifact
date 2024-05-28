@@ -15,4 +15,12 @@ else
     policy="credit"
 fi
 
-srun -s --unbuffered -p llm_s -w $machines --gres=gpu:0 -n1 -c 128 bash ./run_server.sh $tp $num_groups $num_models $master_ip $model $exec_type $migration_type $policy
+if [ $model -eq 70 ]; then
+    num_node=4
+elif [ $num_groups -eq 32 ]; then
+    num_node=4
+else 
+    num_node=1
+fi
+
+srun -s --unbuffered -p llm_s -w $machines --gres=gpu:0 -n$num_node -c 128 bash ./run_server.sh $tp $num_groups $num_models $master_ip $model $exec_type $migration_type $policy
