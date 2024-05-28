@@ -16,7 +16,7 @@ num_gpus=$((tp * num_groups))
 ips=$(ip a)
 is_master=false
 
-if [[ $ips =~ $master_ip ]]; then # 
+if [[ $ips =~ $master_ip/24 ]]; then # 
     echo "is master"
     ray start --head
 else
